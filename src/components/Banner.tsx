@@ -12,9 +12,9 @@ function checkTimestamp(name) {
   let now = new Date();
   let updateTime = Date.parse(name.replace("Updated on ",""))
   let elapsedTime = (now.getTime()-updateTime)/1000
-  let result = "GOOD"
+  let result = "Good"
   if (elapsedTime > 30 * 60)
-    result = "BAD"
+    result = "Bad"
   let elapsedSecond = Math.floor(elapsedTime % 60)
   elapsedTime = Math.floor(elapsedTime / 60)
   let elapsedMinute = elapsedTime % 60
@@ -33,11 +33,11 @@ const Banner = (props: BannerProps) => {
     <>
         <div className="absolute left-0 right-0 flex flex-col items-center">
           <div className="w-196 my-8 rounded-xl bg-amber-300 border-8 shadow-xl border-amber-600 px-4 py-2 text-center">
-            <div>
-              <h1 id="name" className="text-black text-3xl font-semibold">{name}</h1>
-              <h1 id="elapse" style={{color: "blue", fontSize: "30px"}}>{elapse}</h1>
-              <h1 id="result" style={{color: color, fontSize: "40px"}}>{result}</h1>
-            </div>
+            <span class="entity">
+                <h1 id="name" className="text-black text-3xl font-semibold">{name}</h1>
+                <h1 id="elapse" style={{color: "blue", fontSize: "30px"}}>{elapse}</h1>
+                <h1 class="rating" style={{color: color, fontSize: "40px"}}>{result}</h1>
+              </span>
           </div>
         </div>        
     </>
