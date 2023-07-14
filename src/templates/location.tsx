@@ -34,7 +34,7 @@ import BreadCrumbs from "../components/Breadcrumbs";
  */
 export const config: TemplateConfig = {
   stream: {
-    $id: "location-stream",
+    $id: "location-stream-2",
     // Defines the scope of entities that qualify for this stream.
     // You can use entityTypes, savedFilterIds, and/or entityIds
     filter: {
