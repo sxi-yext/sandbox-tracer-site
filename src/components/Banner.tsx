@@ -38,7 +38,10 @@ const Banner = (props: BannerProps) => {
                 <h1 id="name" className="text-black text-3xl font-semibold">{name}</h1>
                 <h1 id="elapse" style={{color: "blue", fontSize: "30px"}}>{elapse}</h1>
                 <h1 class="rating" style={{color: color, fontSize: "40px"}}>{result}</h1>
-                <h1 class="encoding-chars" style={{color: color, fontSize: "40px"}}>{characterEncoding}</h1>
+                <div className="flex">
+                  <h1 className="text-3xl font-bold mr-2">Encoding check:</h1>
+                  <h1 class="encoding-chars" style={{color: color, fontSize: "40px"}}>{characterEncoding}</h1>
+                </div>
               </span>
           </div>
         </div>        
