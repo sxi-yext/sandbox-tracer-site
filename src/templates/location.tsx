@@ -55,6 +55,7 @@ export const config: TemplateConfig = {
       "geocodedCoordinate",
       "services",
       "photoGallery",
+      "c_characterEncoding",
     ],
     // The entity language profiles that documents will be generated for.
     localization: {
@@ -137,12 +138,13 @@ const Location: Template<TemplateRenderProps> = ({
     services,
     description,
     siteDomain,
+    c_characterEncoding
   } = document;
 
   return (
     <>
       <PageLayout>
-        <Banner name={name} address="Bad" />
+        <Banner name={name} characterEncoding={c_characterEncoding} address="Bad" />
       </PageLayout>
       {/* This component displays a link to the entity that represents the given page in the Knowledge Graph*/}
       {!isProduction(siteDomain) && <EditTool data={document} />}
